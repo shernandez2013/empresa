@@ -16,6 +16,7 @@ export default function CookieBanner({ dict, lang }: { dict: CookieBannerDict; l
 
   useEffect(() => {
     const consent = localStorage.getItem("cookie-consent");
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     if (!consent) setVisible(true);
   }, []);
 

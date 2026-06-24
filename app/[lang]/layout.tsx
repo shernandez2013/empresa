@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { hasLocale, type Locale } from "../dictionaries";
+import { hasLocale } from "../dictionaries";
 
 const metadata_es: Metadata = {
   metadataBase: new URL("https://orbexasystems.com"),

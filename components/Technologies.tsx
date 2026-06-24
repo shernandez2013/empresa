@@ -29,9 +29,6 @@ const dbLabels: Record<string, string> = {
   en: "Database",
 };
 
-const row1 = [...allTechs, ...allTechs];
-const row2 = [...[...allTechs].reverse(), ...[...allTechs].reverse()];
-
 type TechDict = {
   label: string;
   title: string;

@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import { X, MessageCircle } from "lucide-react";
 
 const PHONE = "525586009578";
 

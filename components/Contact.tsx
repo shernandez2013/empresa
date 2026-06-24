@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Mail, Phone, MapPin, Send, MessageCircle, CheckCircle } from "lucide-react";
+import { Mail, MapPin, Send, MessageCircle, CheckCircle } from "lucide-react";
 
 type ContactDict = {
   label: string;
