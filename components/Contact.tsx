@@ -89,8 +89,14 @@ export default function Contact({ dict, lang }: { dict: ContactDict; lang: strin
         body: JSON.stringify(form),
       });
       if (!res.ok) {
-        const data = await res.json();
-        throw new Error(data.error || dict.form.errorGeneric);
+        let message = dict.form.errorGeneric;
+        try {
+          const data = await res.json();
+          message = data.error || dict.form.errorGeneric;
+        } catch {
+          // body vacío o no-JSON — usar mensaje genérico
+        }
+        throw new Error(message);
       }
       setSubmitted(true);
     } catch (err) {
